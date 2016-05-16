@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+    <TITLE>Calculator</TITLE>
+    <SCRIPT TYPE="text/javascript">
+     function add_number(number){
+            document.getElementById("display").value = document.getElementById("display").value + Android.add_number(number);
+      }  //deliver the entered value to android interface.
+
+      function send(){
+            Android.send(document.getElementById("display").value,document.getElementById("content").value);
+      } // deliver phone number and content to android interface
+      function back(){
+            document.getElementById("display").value = Android.back(document.getElementById("display").value);
+      } // deliver phone number to erase the rear of string
+    </SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+    <H1> HW3 </H1>
+    <FORM>
+        <TABLE BORDER="2">
+            <TR ALIGN=CENTER>
+                <TD>
+                    <INPUT TYPE="button" value="    1    "
+                           onClick="add_number('1')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    2    "
+                           onClick="add_number('2')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    3    "
+                           onClick="add_number('3')">
+                </TD>
+            </TR>
+            <TR ALIGN=CENTER>
+                <TD>
+                    <INPUT TYPE="button" value="    4    "
+                           onClick="add_number('4')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    5    "
+                           onClick="add_number('5')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    6    "
+                           onClick="add_number('6')">
+                </TD>
+            </TR>
+            <TR ALIGN=CENTER>
+                <TD>
+                    <INPUT TYPE="button" value="    7    "
+                           onClick="add_number('7')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    8    "
+                           onClick="add_number('8')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    9    "
+                           onClick="add_number('9')">
+                </TD>
+            </TR>
+            <TR ALIGN=CENTER>
+                <TD>
+                    <INPUT TYPE="button" value="    *    "
+                           onClick="add_number('*')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="     0    "
+                           onClick="add_number('0')">
+                </TD>
+                <TD>
+                    <INPUT TYPE="button" value="    #    "
+                           onClick="add_number('#')">
+                </TD>
+            </TR>
+            <TR ALIGN=CENTER>
+                <TD>
+                    <INPUT TYPE="button" value="    <-   "
+                           onClick="back()">
+                </TD>
+
+        </TABLE>
+
+
+        Mobile Number <INPUT TYPE="text" ID="display" size=15> <br><br>
+
+	    <textarea id="content" rows="4" cols="50">
+
+	    </textarea><br>
+
+        <INPUT TYPE="button" value="   Submit   "
+               onClick="send()">
+
+    </FORM>
+</CENTER>
+</BODY>
+</HTML>
